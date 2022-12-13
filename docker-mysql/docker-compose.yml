@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  nextjs-express-db:
+    hostname: nextjs-express-db
+    image: mariadb:latest
+    volumes:
+      - ./db-data:/var/lib/mysql
+    environment:
+      - TZ=Europe/Berlin
+      - MARIADB_USER=wilder 
+      - MARIADB_PASSWORD=wilder123
+      - MARIADB_DATABASE=wilder
+      - MARIADB_ROOT_PASSWORD=wilder123
+    ports:
+      - "33063:3306"
