@@ -1,6 +1,7 @@
 import express from "express";
 import helmet from "helmet";
 import database from "./database";
+import MainRouter from "./routes";
 
 const app = express();
 app.use(helmet());
@@ -9,6 +10,8 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Hello there!");
 });
+
+app.use("/api", MainRouter);
 
 app.listen(5050, () => {
   if (database.getConnection() == null) {
