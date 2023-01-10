@@ -1,4 +1,4 @@
-declare interface UserModel {
+export declare interface UserModel {
   id: number | string;
   email: string;
   hashedPassword: string | undefined;

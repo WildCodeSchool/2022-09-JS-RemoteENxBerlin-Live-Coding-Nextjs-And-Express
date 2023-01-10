@@ -4,6 +4,7 @@ import argon2 from "argon2";
 import jwt from "jsonwebtoken";
 
 import database from "../database";
+import type { UserModel } from "types/src/dbModel/user";
 
 type UserMySQLResult = UserModel & RowDataPacket;
 
