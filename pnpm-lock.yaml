@@ -14,10 +14,12 @@ importers:
 
   apps/backend:
     specifiers:
+      '@types/cors': ^2.8.13
       '@types/express': ^4.17.14
       '@types/jsonwebtoken': ^8.5.9
       '@types/node': ^17.0.12
       argon2: ^0.30.2
+      cors: ^2.8.5
       dotenv: ^16.0.3
       express: ^4.18.2
       helmet: ^6.0.1
@@ -28,12 +30,14 @@ importers:
       typescript: ^4.9.4
     dependencies:
       argon2: 0.30.2
+      cors: 2.8.5
       dotenv: 16.0.3
       express: 4.18.2
       helmet: 6.0.1
       jsonwebtoken: 8.5.1
       mysql2: 2.3.3
     devDependencies:
+      '@types/cors': 2.8.13
       '@types/express': 4.17.14
       '@types/jsonwebtoken': 8.5.9
       '@types/node': 17.0.45
@@ -625,6 +629,12 @@ packages:
       '@types/node': 17.0.45
     dev: true
 
+  /@types/cors/2.8.13:
+    resolution: {integrity: sha512-RG8AStHlUiV5ysZQKq97copd2UmVYw3/pRMLefISZ3S1hK104Cwm7iLQ3fTKx+lsUH2CE8FlLaYeEA2LSeqYUA==}
+    dependencies:
+      '@types/node': 17.0.45
+    dev: true
+
   /@types/express-serve-static-core/4.17.31:
     resolution: {integrity: sha512-DxMhY+NAsTwMMFHBTtJFNp5qiHKJ7TeqOo23zVEM9alT1Ml27Q3xcTH0xwxn7Q0BbMcVEJOs/7aQtUWupUQN3Q==}
     dependencies:
@@ -1146,6 +1156,14 @@ packages:
   /core-js-pure/3.26.1:
     resolution: {integrity: sha512-VVXcDpp/xJ21KdULRq/lXdLzQAtX7+37LzpyfFM973il0tWSsDEoyzG38G14AjTpK9VTfiNM9jnFauq/CpaWGQ==}
     requiresBuild: true
+    dev: false
+
+  /cors/2.8.5:
+    resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==}
+    engines: {node: '>= 0.10'}
+    dependencies:
+      object-assign: 4.1.1
+      vary: 1.1.2
     dev: false
 
   /create-require/1.1.1:
