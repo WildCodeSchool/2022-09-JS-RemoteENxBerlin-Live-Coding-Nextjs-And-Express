@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { verifyAdmin } from "../middleware/verifyAdmin";
 import {
   getAllUsers,
   createUser,
@@ -8,6 +9,8 @@ import {
 } from "./usersHandlers";
 
 const UsersRouter = Router();
+
+UsersRouter.use(verifyAdmin);
 
 UsersRouter.get("/", getAllUsers);
 UsersRouter.post("/", createUser);

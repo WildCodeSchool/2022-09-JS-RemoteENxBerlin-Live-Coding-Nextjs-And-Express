@@ -5,4 +5,5 @@ export declare interface UserModel {
   firstName: string | undefined;
   lastName: string | undefined;
   birthdate: string | Date | undefined;
+  isAdmin: boolean;
 }

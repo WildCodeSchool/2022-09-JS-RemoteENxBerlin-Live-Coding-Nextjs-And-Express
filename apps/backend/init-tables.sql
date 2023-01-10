@@ -5,5 +5,6 @@ CREATE TABLE
         hashedPassword VARCHAR(255),
         firstName VARCHAR(100),
         lastName VARCHAR(100),
-        birthdate DATE
+        birthdate DATE,
+        isAdmin BOOLEAN NOT NULL DEFAULT false,
     );
